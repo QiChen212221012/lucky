@@ -15,4 +15,11 @@ class PostPolicy
         // 允许用户删除自己的帖子或管理员删除帖子
         return $user->id === $post->user_id || $user->is_admin;
     }
+
+    public function update(User $user, Post $post)
+{
+    // 只有帖子作者或管理员可以编辑帖子
+    return $user->id === $post->user_id || $user->is_admin;
+}
+
 }

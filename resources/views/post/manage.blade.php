@@ -45,17 +45,22 @@
 
                         <!-- Edit 和 Delete 按钮 -->
                         <div class="flex items-center gap-4 mt-4">
-                            <a href="{{ route('post.edit', $post->id) }}" 
-                               class="btn-edit flex items-center gap-2">
-                                <i class="fas fa-edit"></i> Edit
-                            </a>
-                            <form action="{{ route('post.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn-delete flex items-center gap-2">
-                                    <i class="fas fa-trash-alt"></i> Delete
-                                </button>
-                            </form>
+                            @can('update', $post)
+                                <a href="{{ route('post.edit', $post->id) }}" 
+                                   class="btn-edit flex items-center gap-2">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                            @endcan
+
+                            @can('delete', $post)
+                                <form action="{{ route('post.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn-delete flex items-center gap-2">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </button>
+                                </form>
+                            @endcan
                         </div>
                     </div>
                 @endforeach
