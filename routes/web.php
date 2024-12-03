@@ -75,5 +75,7 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+// This is a comment
+
 // 认证路由
 require __DIR__.'/auth.php';
