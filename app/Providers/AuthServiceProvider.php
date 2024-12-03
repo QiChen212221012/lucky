@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,6 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         \App\Models\Comment::class => \App\Policies\CommentPolicy::class,
+        \App\Models\Post::class => \App\Policies\PostPolicy::class, // 添加 Post 模型与 PostPolicy 的映射
     ];    
 
     /**
@@ -21,6 +22,11 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->registerPolicies();
+
+        // 定义全局 Gate 示例（可选）
+        Gate::define('admin-access', function ($user) {
+            return $user->is_admin;
+        });
     }
 }

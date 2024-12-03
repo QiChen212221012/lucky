@@ -135,6 +135,9 @@ class PostController extends Controller
  {
      $post = Post::findOrFail($id);
 
+         // 检查当前用户是否有权限删除帖子
+    $this->authorize('delete', $post);
+
      // 确保当前用户有权限删除帖子
      if (auth()->id() !== $post->user_id) {
          return redirect()->route('home')->with('error', 'Unauthorized access!');
