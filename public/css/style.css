@@ -1,0 +1,547 @@
+/* 全局样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background: linear-gradient(to right, #007BFF, #0056b3); /* 醒目的蓝色渐变 */
+}
+
+main {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 特定按钮样式 */
+.hero-btn {
+    background: linear-gradient(to right, #00695c, #004d40); /* 亮绿色渐变 */
+    color: white;
+}
+
+.hero-btn:hover {
+    background: linear-gradient(to right, #004d40, #00695c);
+}
+
+.login-btn {
+    background: linear-gradient(to right, #42a5f5, #1e88e5);
+    color: white;
+}
+
+.register-btn {
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    color: white;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Header 样式 */
+header {
+    background: linear-gradient(to right, #004d40, #00796b);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00bcd4; 
+}
+
+header h1.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00e676;
+    margin: 0;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00e676;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #0097a7, #00acc1);
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Posts */
+.featured-posts, .popular-posts, .tags-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-posts h3, .popular-posts h3, .tags-section h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #004d40;
+}
+
+.post-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Popular Posts */
+.popular-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.popular-list li {
+    margin: 10px 0;
+}
+
+.popular-list li a {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.popular-list li a:hover {
+    color: #00e676;
+}
+
+/* Tag Cloud */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #004d40;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tag {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #2e7d32;
+    color: #e0f7fa;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* 社交图标 */
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #00e676; /* 鼠标悬停时的绿色渐变 */
+}
+
+/* No Data Section */
+.no-data {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* 标题样式 */
+.section-title {
+    font-size: 2.5rem;
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+/* 文本样式 */
+.intro-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flex Box 布局 */
+.flex-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 卡片样式 */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 48%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.full-width {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.card h3 {
+    color: #00695c;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* 列表样式 */
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Testimonial Card 样式 */
+.testimonial-card {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 48%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 仅在悬停时添加动画 */
+.testimonial-card.hover-animated:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.journey-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.journey-item {
+    text-align: center;
+}
+.journey-item .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* 表单容器 */
+.form-container {
+    max-width: 800px;
+    padding: 40px;
+    background: linear-gradient(to bottom, #ffffff, #e8f8ff);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* 表单标题 */
+.form-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #004d40;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 错误提示框 */
+.error-box {
+    background-color: #ffe8e8;
+    color: #d9534f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* 表单组 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* 带图标的输入框 */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.input-with-icon input,
+.input-with-icon textarea {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 2px solid #cce7ff;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.input-with-icon input:focus,
+.input-with-icon textarea:focus {
+    border-color: #00bfa5;
+    outline: none;
+}
+
+/* 标签样式 */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 默认标签样式 */
+.tag {
+    padding: 8px 12px;
+    background-color: #e3f2f9;
+    color: #004d40;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag:hover {
+    background-color: #b2ebf2;
+    transform: scale(1.1);
+}
+
+/* 选中样式 */
+.tag.selected {
+    background-color: #004d40;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 提交按钮 */
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    background: linear-gradient(to right, #00796b, #004d40);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #004d40, #00796b);
+}
+
+/* 上传图片 */
+input[type="file"] {
+    border: 2px solid #cce7ff;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+/* post/manage页面 */
+.btn-primary {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
