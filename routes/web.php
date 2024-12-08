@@ -70,6 +70,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::delete('/admin/reports/comments/{id}', [AdminController::class, 'deleteComment'])->name('admin.deleteComment');
 });
 
+Route::get('/logout', function () {
+    auth()->logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+    return redirect('/');
+});
+
 // 关于我们路由
 Route::get('/about', function () {
     return view('about');
